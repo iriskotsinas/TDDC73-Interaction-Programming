@@ -1,123 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
+    android:adjustViewBounds="true"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:contentDescription="image"
+        android:src="@drawable/similarlogo"
+        app:layout_constraintBottom_toTopOf="@id/GridLayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:windowSoftInputMode="adjustResize">
+    <GridLayout
+        android:id="@+id/GridLayout1"
+        android:layout_width="280dp"
+        android:layout_height="125dp"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:context=".GridXMLActivity">
 
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_margin="28dp"
-                android:contentDescription="@string/app_name"
-                android:src="@drawable/similarlogo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+            android:id="@+id/button1"
+            android:layout_gravity="start|top"
+            android:text="BUTTON" />
 
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:columnCount="1"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView">
+        <Button
+            android:id="@+id/button2"
+            android:layout_gravity="end|top"
+            android:text="BUTTON" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+        <Button
+            android:id="@+id/button3"
+            android:layout_gravity="start|bottom"
+            android:text="BUTTON" />
 
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="BUTTON" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_gravity="end|bottom"
+            android:text="BUTTON" />
+    </GridLayout>
 
-                    <Space
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/LinearLayout1"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="200dp"
+        android:columnCount="2"
+        android:rowCount="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GridLayout1"
+        tools:context=".GridXMLActivity">
 
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="BUTTON" />
-                </LinearLayout>
+        <TextView
+            android:id="@+id/TextView1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Email"/>
 
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="BUTTON" />
-
-                    <Space
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="BUTTON" />
-                </LinearLayout>
-            </GridLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="fill_parent"
+        <EditText
+            android:id="@+id/editText"
+            android:ems="10"
+            android:backgroundTint="#cd1b62"
+            android:textCursorDrawable="@null"
+            android:textColor="#cd1b60"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="64dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:gravity="center"
-            >
+            android:layout_width="200dp"
+            android:inputType="text"
+            android:autofillHints="example@gmail.com"
+            tools:ignore="LabelFor" />
+    </LinearLayout>
 
-            <TextView
-                android:layout_width="92dp"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="Email:"
-                android:textAlignment="center" />
-
-            <Space
-                android:layout_width="40dp"
-                android:layout_height="wrap_content" />
-
-            <EditText
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1">
-
-            </EditText>
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
