@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 
 import {
@@ -37,7 +38,6 @@ const InputForm = ({
   animation,
   cardLength,
   setCardLength,
-  cardId,
   setCardId,
 }: InputForm) => {
   const nameValidate = new RegExp('^[a-zA-z ]*$');

@@ -1,7 +1,5 @@
 import React from 'react';
 
-// import FontAwesome from 'react-native-vector-icons/FontAwesome';
-
 import {
   StyleSheet,
   View,
@@ -12,7 +10,7 @@ import {
 } from 'react-native';
 
 const {width, height} = Dimensions.get('window');
-const {Value} = Animated;
+//const {Value} = Animated;
 
 interface Card {
   cardNumber: string;
@@ -30,7 +28,6 @@ const Card = ({
   cardName,
   cardExpiry,
   cardCode,
-  cardLength,
   cardId,
   cardAnimation,
   imgList,
@@ -55,7 +52,7 @@ const Card = ({
             transform: [{rotateY: backrotateY}],
           },
         ]}>
-        <Image source={require('../assets/25.jpeg')} style={styles.card} />
+        <Image source={require('../assets/17.jpeg')} style={styles.card} />
         <View style={styles.top} />
         <View style={styles.view}>
           <Text
@@ -87,7 +84,7 @@ const Card = ({
             transform: [{rotateY: forntrotateY}],
           },
         ]}>
-        <Image source={require('../assets/25.jpeg')} style={styles.card} />
+        <Image source={require('../assets/17.jpeg')} style={styles.card} />
         <View style={styles.overlayText}>
           <View style={styles.cardRow}>
             <Image source={require('../assets/chip.png')} style={styles.chip} />

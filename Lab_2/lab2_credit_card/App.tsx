@@ -1,8 +1,3 @@
-// import amex from './assets/amex.png';
-// import visa from './assets/visa.png';
-// import mastercard from './assets/mastercard.png';
-// import discover from './assets/discover.png';
-
 import React, {useState, useRef} from 'react';
 
 import {View, StatusBar, StyleSheet, Animated} from 'react-native';
