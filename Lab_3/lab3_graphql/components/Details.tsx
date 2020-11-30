@@ -1,21 +1,21 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image, SafeAreaView} from 'react-native';
 
-const DetailScreen = ({route}) => {
-  const URL = {uri: route.params.name.node.owner.avatarUrl};
+const Details = ({route}: any) => {
+  const IMAGE = {uri: route.params.name.node.owner.avatarUrl};
 
   return (
     <SafeAreaView>
       <View style={styles.container}>
         <View>
-          <Image source={URL} style={styles.avatar} />
+          <Image source={IMAGE} style={styles.image} />
         </View>
-        <View style={styles.userInfo}>
+        <View style={styles.info}>
           <Text>Name:</Text>
           <Text>Username:</Text>
           <Text>Member since:</Text>
         </View>
-        <View style={styles.userInfo}>
+        <View style={styles.info}>
           <Text>
             {route.params.name.node.owner.name
               ? route.params.name.node.owner.name
@@ -48,16 +48,10 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 100,
     borderBottomLeftRadius: 100,
   },
-  userInfo: {
+  info: {
     flex: 1,
     justifyContent: 'center',
     padding: 10,
-  },
-  avatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 60,
-    margin: 10,
   },
   description: {
     backgroundColor: '#fff',
@@ -68,5 +62,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     paddingBottom: 10,
   },
+  image: {
+    width: 100,
+    height: 100,
+    borderRadius: 60,
+    margin: 10,
+  },
 });
-export default DetailScreen;
+export default Details;

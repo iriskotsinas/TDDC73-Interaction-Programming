@@ -10,6 +10,9 @@ import {
 import Language from './components/Language';
 import {TOKEN} from '@env';
 import DisplayData from './components/DisplayData';
+import Details from './components/Details';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
 
 const link = createHttpLink({
   uri: 'https://api.github.com/graphql',
@@ -27,7 +30,7 @@ interface AppProps {
   lang: ReactText | undefined;
 }
 
-const App = (props: AppProps) => {
+const App = (props: AppProps, navigation: any) => {
   const [language, setLanguage] = useState<ReactText | undefined>('All');
 
   const handleChange = (codeLanguage: string | ReactText) => {
@@ -46,10 +49,28 @@ const App = (props: AppProps) => {
       </SafeAreaView>
       <SafeAreaView>
         <ScrollView>
-          <DisplayData language={language} />
+          <DisplayData language={language} navigation={navigation} />
         </ScrollView>
       </SafeAreaView>
     </ApolloProvider>
+  );
+};
+
+const RootStack = createStackNavigator();
+//https://reactnavigation.org/docs/typescript/
+
+interface RouterData {
+  language: ReactText | undefined;
+}
+
+const Router = () => {
+  return (
+    <NavigationContainer>
+      <RootStack.Navigator initialRouteName="Home">
+        <RootStack.Screen name="Home" component={App} />
+        <RootStack.Screen name="Details" component={Details} />
+      </RootStack.Navigator>
+    </NavigationContainer>
   );
 };
 
@@ -86,4 +107,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Router;

@@ -9,9 +9,11 @@ import {
 } from 'react-native';
 import {useMyQueryQuery} from '../src/generated/graphql';
 import {ReactText} from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 interface DisplayData {
   language: ReactText | undefined;
+  navigation: any;
 }
 
 const getDate = () => {
@@ -22,10 +24,12 @@ const getDate = () => {
   return dateToday;
 };
 
-const DisplayData = (dataProps: DisplayData) => {
+const DisplayData = (dataProps: DisplayData, {navigation}: any) => {
   console.log(dataProps.language);
   const date = getDate();
   console.log(date);
+  const navigation2 = useNavigation();
+
   const {loading, data, error} = useMyQueryQuery({
     variables: {
       // first: 25,
@@ -46,11 +50,11 @@ const DisplayData = (dataProps: DisplayData) => {
   return (
     <SafeAreaView>
       <ScrollView style={styles.scrollView}>
-        <View style={styles.container}>
+        <View>
           {renderData?.map(function (name: any) {
             return (
               <TouchableOpacity
-                // onPress={() => navigation.navigate('Details', {name: name})}
+                onPress={() => navigation2.navigate('Details', {name: name})}
                 style={styles.row}
                 key={name.node.name}>
                 <Text style={styles.heading}>{name.node.name}</Text>
