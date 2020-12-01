@@ -13,8 +13,10 @@ export const GITHUB_DATA = gql`
             }
             description
             forkCount
+            createdAt
             owner {
               avatarUrl
+              login
               ... on User {
                 id
                 name
@@ -43,40 +45,3 @@ export const GITHUB_DATA = gql`
     }
   }
 `;
-
-// export const GET_GITHUBDATA = gql`
-//   query MyQuery($first: Int, $query: String!, $type: SearchType!) {
-//     search(first: $first, query: $query, type: $type) {
-//       edges {
-//         node {
-//           ... on Repository {
-//             refs(first: 0, refPrefix: "refs/heads/") {
-//               totalCount
-//             }
-//             object(expression: "master") {
-//               ... on Commit {
-//                 history {
-//                   totalCount
-//                 }
-//               }
-//             }
-//             name
-//             owner {
-//               login
-//             }
-//             description
-//             stargazers {
-//               totalCount
-//             }
-//             primaryLanguage {
-//               name
-//             }
-//             licenseInfo {
-//               name
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;

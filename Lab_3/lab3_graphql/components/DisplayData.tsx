@@ -24,7 +24,7 @@ const getDate = () => {
   return dateToday;
 };
 
-const DisplayData = (dataProps: DisplayData, {navigation}: any) => {
+const DisplayData = (dataProps: DisplayData) => {
   console.log(dataProps.language);
   const date = getDate();
   console.log(date);
@@ -32,11 +32,8 @@ const DisplayData = (dataProps: DisplayData, {navigation}: any) => {
 
   const {loading, data, error} = useMyQueryQuery({
     variables: {
-      // first: 25,
-      // query: 'created:>' + getDate() + ' sort:stars-desc language:' + language,
-      // type: 'REPOSITORY',
       query: `language:${dataProps.language} stars:>10000`,
-      pollInterval: 500,
+      //pollInterval: 500,
     },
   });
   if (loading) {
@@ -78,17 +75,16 @@ const DisplayData = (dataProps: DisplayData, {navigation}: any) => {
   );
 };
 
-//  {/* onPress={() => navigation.navigate('Details', {name: name})}
-//  style={styles.row}
-//  key={name.node.name}> */}
-
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: '#EAF2F8',
     flexGrow: 1,
     display: 'flex',
     flexDirection: 'column',
-    //height: ScreenHeight - 128,
+  },
+  text_stars: {
+    textAlign: 'right',
+    color: 'gray',
   },
   heading: {
     fontSize: 18,
@@ -99,10 +95,6 @@ const styles = StyleSheet.create({
   description: {
     marginBottom: 10,
     marginTop: 10,
-  },
-  text_stars: {
-    textAlign: 'right',
-    color: 'gray',
   },
   row: {
     justifyContent: 'center',

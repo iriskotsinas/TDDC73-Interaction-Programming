@@ -3,6 +3,7 @@ import {StyleSheet, Text, View, Image, SafeAreaView} from 'react-native';
 
 const Details = ({route}: any) => {
   const IMAGE = {uri: route.params.name.node.owner.avatarUrl};
+  console.log(route.params.name.node.owner);
 
   return (
     <SafeAreaView>
@@ -17,8 +18,8 @@ const Details = ({route}: any) => {
         </View>
         <View style={styles.info}>
           <Text>
-            {route.params.name.node.owner.name
-              ? route.params.name.node.owner.name
+            {route.params.name.node.name
+              ? route.params.name.node.name
               : 'undefined'}
           </Text>
           <Text>
@@ -27,8 +28,8 @@ const Details = ({route}: any) => {
               : 'undefined'}
           </Text>
           <Text>
-            {route.params.name.node.owner.createdAt
-              ? route.params.name.node.owner.createdAt.substring(0, 10)
+            {route.params.name.node.createdAt
+              ? route.params.name.node.createdAt.substring(0, 10)
               : 'undefined'}
           </Text>
         </View>

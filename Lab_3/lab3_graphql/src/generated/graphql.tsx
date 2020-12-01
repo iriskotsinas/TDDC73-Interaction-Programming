@@ -18821,7 +18821,7 @@ export type MyQueryQuery = (
           & Pick<RepositoryConnection, 'totalCount'>
         ), owner: (
           { __typename?: 'Organization' }
-          & Pick<Organization, 'avatarUrl'>
+          & Pick<Organization, 'avatarUrl' | 'login'>
         ) | (
           { __typename?: 'User' }
           & Pick<User, 'id' | 'name' | 'login' | 'bio' | 'createdAt' | 'email' | 'avatarUrl'>
@@ -18858,8 +18858,10 @@ export const MyQueryDocument = gql`
           }
           description
           forkCount
+          createdAt
           owner {
             avatarUrl
+            login
             ... on User {
               id
               name
