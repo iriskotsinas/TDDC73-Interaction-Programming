@@ -15,6 +15,7 @@ const Details = ({route}: any) => {
           <Text>Name:</Text>
           <Text>Username:</Text>
           <Text>Member since:</Text>
+          <Text>Total commits:</Text>
         </View>
         <View style={styles.info}>
           <Text>
@@ -30,6 +31,12 @@ const Details = ({route}: any) => {
           <Text>
             {route.params.name.node.createdAt
               ? route.params.name.node.createdAt.substring(0, 10)
+              : 'undefined'}
+          </Text>
+          <Text>
+            {route.params.name.node.defaultBranchRef.target.history.totalCount
+              ? route.params.name.node.defaultBranchRef.target.history
+                  .totalCount
               : 'undefined'}
           </Text>
         </View>

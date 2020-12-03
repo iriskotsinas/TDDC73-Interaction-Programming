@@ -11,6 +11,16 @@ export const GITHUB_DATA = gql`
             forks {
               totalCount
             }
+            defaultBranchRef {
+              target {
+                ... on Commit {
+                  id
+                  history {
+                    totalCount
+                  }
+                }
+              }
+            }
             description
             forkCount
             createdAt

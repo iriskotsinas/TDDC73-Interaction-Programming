@@ -18819,7 +18819,17 @@ export type MyQueryQuery = (
         & { forks: (
           { __typename?: 'RepositoryConnection' }
           & Pick<RepositoryConnection, 'totalCount'>
-        ), owner: (
+        ), defaultBranchRef?: Maybe<(
+          { __typename?: 'Ref' }
+          & { target?: Maybe<{ __typename?: 'Blob' } | (
+            { __typename?: 'Commit' }
+            & Pick<Commit, 'id'>
+            & { history: (
+              { __typename?: 'CommitHistoryConnection' }
+              & Pick<CommitHistoryConnection, 'totalCount'>
+            ) }
+          ) | { __typename?: 'Tag' } | { __typename?: 'Tree' }> }
+        )>, owner: (
           { __typename?: 'Organization' }
           & Pick<Organization, 'avatarUrl' | 'login'>
         ) | (
@@ -18855,6 +18865,16 @@ export const MyQueryDocument = gql`
           name
           forks {
             totalCount
+          }
+          defaultBranchRef {
+            target {
+              ... on Commit {
+                id
+                history {
+                  totalCount
+                }
+              }
+            }
           }
           description
           forkCount
