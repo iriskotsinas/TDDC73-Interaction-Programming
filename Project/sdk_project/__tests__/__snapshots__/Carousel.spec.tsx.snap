@@ -1,0 +1,516 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Carousel /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fbfbfb",
+      "borderColor": "#ebebeb",
+      "borderRadius": 8,
+      "borderWidth": 1,
+      "marginTop": 10,
+      "shadowColor": "#fcfcfc",
+      "shadowOffset": Object {
+        "height": 5,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "width": "100%",
+    }
+  }
+>
+  <Text>
+    YOUR FILMS
+  </Text>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "overflow": "hidden",
+        "width": "100%",
+      }
+    }
+    decelerationRate="fast"
+    horizontal={true}
+    onContentSizeChange={[Function]}
+    onScroll={[Function]}
+    pagingEnabled={true}
+    scrollEventThrottle={200}
+    showsHorizontalScrollIndicator={false}
+  >
+    <View>
+      <RCTScrollView>
+        <View>
+          <View>
+            <Modal
+              animationType="none"
+              hardwareAccelerated={false}
+              hideModalContentWhileAnimating={false}
+              onModalHide={[Function]}
+              onModalWillHide={[Function]}
+              onModalWillShow={[Function]}
+              onRequestClose={[Function]}
+              scrollHorizontal={false}
+              scrollOffset={0}
+              scrollOffsetMax={0}
+              scrollTo={null}
+              supportedOrientations={
+                Array [
+                  "portrait",
+                  "landscape",
+                ]
+              }
+              swipeThreshold={100}
+              transparent={true}
+              visible={false}
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                forwardedRef={[Function]}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "black",
+                    "bottom": 0,
+                    "height": 1334,
+                    "left": 0,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": 750,
+                  }
+                }
+              />
+              <View
+                forwardedRef={[Function]}
+                hideModalContentWhileAnimating={false}
+                onModalHide={[Function]}
+                onModalWillHide={[Function]}
+                onModalWillShow={[Function]}
+                pointerEvents="box-none"
+                scrollHorizontal={false}
+                scrollOffset={0}
+                scrollOffsetMax={0}
+                scrollTo={null}
+                style={
+                  Object {
+                    "flex": 1,
+                    "justifyContent": "center",
+                    "margin": 37.5,
+                    "transform": Array [
+                      Object {
+                        "translateY": 0,
+                      },
+                    ],
+                  }
+                }
+                supportedOrientations={
+                  Array [
+                    "portrait",
+                    "landscape",
+                  ]
+                }
+                swipeThreshold={100}
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 25,
+                        "marginHorizontal": 40,
+                        "marginVertical": 250,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    IMDB-rating: 8.8
+                  </Text>
+                  <View
+                    accessibilityRole="button"
+                    accessibilityState={Object {}}
+                    accessible={true}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {},
+                        ]
+                      }
+                    >
+                      <Text
+                        style={
+                          Array [
+                            Object {
+                              "color": "#007AFF",
+                              "fontSize": 18,
+                              "margin": 8,
+                              "textAlign": "center",
+                            },
+                            Object {
+                              "color": "#704646",
+                            },
+                          ]
+                        }
+                      >
+                        Hide
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </Modal>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "flex": 1,
+                "opacity": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 20,
+                "paddingTop": 30,
+              }
+            }
+            testID="totalFilm"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+                }
+              }
+              style={
+                Object {
+                  "aspectRatio": 0.6666666666666666,
+                  "width": "100%",
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "fontSize": 20,
+                  "paddingTop": 20,
+                  "textAlign": "left",
+                  "width": "100%",
+                }
+              }
+              testID="film"
+            >
+              Fight Club
+            </Text>
+            <View
+              style={
+                Object {
+                  "marginBottom": 8,
+                  "width": "100%",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "fontSize": 11,
+                    "fontWeight": "600",
+                    "paddingTop": 5,
+                    "textAlign": "left",
+                    "width": "100%",
+                  }
+                }
+              >
+                1999
+              </Text>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+      <RCTScrollView>
+        <View>
+          <View>
+            <Modal
+              animationType="none"
+              hardwareAccelerated={false}
+              hideModalContentWhileAnimating={false}
+              onModalHide={[Function]}
+              onModalWillHide={[Function]}
+              onModalWillShow={[Function]}
+              onRequestClose={[Function]}
+              scrollHorizontal={false}
+              scrollOffset={0}
+              scrollOffsetMax={0}
+              scrollTo={null}
+              supportedOrientations={
+                Array [
+                  "portrait",
+                  "landscape",
+                ]
+              }
+              swipeThreshold={100}
+              transparent={true}
+              visible={false}
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                forwardedRef={[Function]}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "black",
+                    "bottom": 0,
+                    "height": 1334,
+                    "left": 0,
+                    "opacity": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": 750,
+                  }
+                }
+              />
+              <View
+                forwardedRef={[Function]}
+                hideModalContentWhileAnimating={false}
+                onModalHide={[Function]}
+                onModalWillHide={[Function]}
+                onModalWillShow={[Function]}
+                pointerEvents="box-none"
+                scrollHorizontal={false}
+                scrollOffset={0}
+                scrollOffsetMax={0}
+                scrollTo={null}
+                style={
+                  Object {
+                    "flex": 1,
+                    "justifyContent": "center",
+                    "margin": 37.5,
+                    "transform": Array [
+                      Object {
+                        "translateY": 0,
+                      },
+                    ],
+                  }
+                }
+                supportedOrientations={
+                  Array [
+                    "portrait",
+                    "landscape",
+                  ]
+                }
+                swipeThreshold={100}
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "fontSize": 25,
+                        "marginHorizontal": 40,
+                        "marginVertical": 250,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    IMDB-rating: 9.0
+                  </Text>
+                  <View
+                    accessibilityRole="button"
+                    accessibilityState={Object {}}
+                    accessible={true}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {},
+                        ]
+                      }
+                    >
+                      <Text
+                        style={
+                          Array [
+                            Object {
+                              "color": "#007AFF",
+                              "fontSize": 18,
+                              "margin": 8,
+                              "textAlign": "center",
+                            },
+                            Object {
+                              "color": "#704646",
+                            },
+                          ]
+                        }
+                      >
+                        Hide
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </Modal>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "flex": 1,
+                "opacity": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 20,
+                "paddingTop": 30,
+              }
+            }
+            testID="totalFilm"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
+                }
+              }
+              style={
+                Object {
+                  "aspectRatio": 0.6666666666666666,
+                  "width": "100%",
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "fontSize": 20,
+                  "paddingTop": 20,
+                  "textAlign": "left",
+                  "width": "100%",
+                }
+              }
+              testID="film"
+            >
+              The Dark Knight
+            </Text>
+            <View
+              style={
+                Object {
+                  "marginBottom": 8,
+                  "width": "100%",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "fontSize": 11,
+                    "fontWeight": "600",
+                    "paddingTop": 5,
+                    "textAlign": "left",
+                    "width": "100%",
+                  }
+                }
+              >
+                2008
+              </Text>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "paddingHorizontal": 10,
+        "paddingTop": 5,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 20,
+          "opacity": 0.5,
+          "paddingHorizontal": 5,
+        }
+      }
+    >
+      •
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`<Carousel /> should render with default settings 1`] = `ShallowWrapper {}`;
