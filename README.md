@@ -4,3 +4,6 @@
 **Lab 2:** Credit card input application in TypeScript, React Native 
 
 **Lab 3:** Trending GitHub repos application in TypeScript, React Native, GraphQL
+
+**Project:** Login and register app, with a carousel in TypeScript, React Native
+
