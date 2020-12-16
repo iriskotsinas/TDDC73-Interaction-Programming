@@ -94,5 +94,4 @@ describe('<Carousel />', () => {
     const sizeItems = inst.root.findAllByType(Image);
     expect(sizeItems.length).toEqual(items.length);
   });
-  
 });

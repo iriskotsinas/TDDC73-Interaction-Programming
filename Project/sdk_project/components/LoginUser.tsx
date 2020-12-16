@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import UserReg from './UserReg';
 import LoginButton from './LoginButton';
-import LoginFields from './LoginFields';
+import LoginFields from './InputFields';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 interface userInfo {
@@ -33,23 +33,23 @@ const LoginUser = ({navigation}: any) => {
         extraHeight={100}
         enableOnAndroid={true}>
         <View style={styles.insideSmallContainer}>
-          <Text style={styles.textStyle}>Username </Text>
+          <Text style={styles.textStyle}>Email</Text>
           <LoginFields
             setState={setUsername}
             state={username}
-            label="Username"
+            label="Email"
             returnKeyType="next"
             value={username.value}
             error={!!username.error}
             errorText={username.error}
             secureTextEntry={false}
-            type={'username'}
+            type={'email'}
             autoCompleteType="email"
             keyboardType="email-address"
           />
         </View>
         <View style={styles.insideSmallContainer}>
-          <Text style={styles.textStyle}>Password </Text>
+          <Text style={styles.textStyle}>Password</Text>
           <LoginFields
             setState={setPassword}
             state={password}
@@ -96,10 +96,11 @@ export default LoginUser;
 
 const styles = StyleSheet.create({
   result: {
-    fontSize: 12,
-    paddingRight: 30,
+    fontSize: 14,
+    // paddingRight: 30,
     color: 'red',
-    paddingTop: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
   },
   btnContainer: {
     justifyContent: 'center',

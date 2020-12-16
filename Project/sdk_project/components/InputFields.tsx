@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {TextInput as Input} from 'react-native-paper';
-import {validateUsername, validatePassword} from './Validator';
+import {validateUsername, validatePassword, validateName} from './Validator';
 
-interface LoginFields {
+interface InputFields {
   errorText: string;
   value: string;
   error: any;
@@ -20,13 +20,13 @@ interface LoginFields {
   };
 }
 
-const LoginFields = ({
+const InputFields = ({
   errorText,
   type,
   setState,
   state,
   ...props
-}: LoginFields) => {
+}: InputFields) => {
   const enterValidate = (text: string) => {
     if (type === 'email') {
       const usernameError = validateUsername(state.value);
@@ -38,7 +38,7 @@ const LoginFields = ({
         setState({value: text, error: ''});
         console.log('Email is correct');
       }
-    } else {
+    } else if (type === 'password') {
       setState({value: text, error: ''});
       const passwordError = validatePassword(text);
       if (passwordError) {
@@ -49,17 +49,28 @@ const LoginFields = ({
         setState({value: text, error: ''});
         console.log('Password is correct');
       }
+    } else {
+      setState({value: text, error: ''});
+      const nameError = validateName(text);
+      if (nameError) {
+        console.log('Name is not correct');
+        setState({value: text, error: nameError});
+        return;
+      } else {
+        setState({value: text, error: ''});
+        console.log('Name is correct');
+      }
     }
   };
-
   return (
     <View style={styles.container}>
       <Input
-        data-testid="input"
         style={styles.input}
         selectionColor={'#000000'}
         underlineColor="transparent"
         mode="outlined"
+        // placeholder={`Enter your ${type}`}
+        // onChangeText={(text: string) => setState({value: text, error: ''})}
         onChangeText={(text: string) => enterValidate(text)}
         theme={{colors: {primary: 'grey', text: 'black'}}}
         {...props}
@@ -87,4 +98,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginFields;
+export default InputFields;

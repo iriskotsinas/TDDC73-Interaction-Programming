@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import UserReg from './UserReg';
-import RegisterFields from './RegisterFields';
+import RegisterFields from './InputFields';
 import {ScrollView} from 'react-native-gesture-handler';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import RegisterButton from './RegisterButton';
