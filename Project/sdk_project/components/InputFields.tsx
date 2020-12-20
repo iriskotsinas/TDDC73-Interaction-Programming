@@ -69,8 +69,6 @@ const InputFields = ({
         selectionColor={'#000000'}
         underlineColor="transparent"
         mode="outlined"
-        // placeholder={`Enter your ${type}`}
-        // onChangeText={(text: string) => setState({value: text, error: ''})}
         onChangeText={(text: string) => enterValidate(text)}
         theme={{colors: {primary: 'grey', text: 'black'}}}
         {...props}

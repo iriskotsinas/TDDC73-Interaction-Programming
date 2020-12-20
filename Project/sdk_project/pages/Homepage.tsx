@@ -13,7 +13,6 @@ const Homepage = ({navigation}: any) => {
       <StatusBar hidden={true} />
       <View style={styles.container}>
         <View style={styles.homeContent}>
-          {/* <Text style={[styles.text, styles.textLogo]}>Welcome</Text> */}
           <Text style={[styles.text, styles.textHeader]}>
             Mini SDK application
           </Text>

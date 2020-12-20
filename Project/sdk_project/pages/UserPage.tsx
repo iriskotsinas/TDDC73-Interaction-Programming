@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Button,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-  Alert,
-} from 'react-native';
+import {Button, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import Carousel from '../components/Carousel';
 import UserReg from '../components/UserReg';
 
@@ -27,11 +20,7 @@ const UserPage = ({navigation}: any) => {
           onPress={() => navigation.navigate('Home')}
         />
       </View>
-      <Carousel
-        onPress={(selected: any) => Alert.alert(`Title: ${selected.title}`)}
-        itemsPerSlide={2}
-        items={items}
-      />
+      <Carousel itemsPerSlide={2} items={items} />
     </SafeAreaView>
   );
 };
@@ -50,7 +39,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '10%',
     flexDirection: 'row',
-    // paddingTop: '1%',
     marginBottom: '15%',
   },
   btnContainer: {

@@ -11,13 +11,6 @@ import LoginButton from './LoginButton';
 import LoginFields from './InputFields';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
-interface userInfo {
-  [index: string]: {
-    password: string;
-    username: string;
-  };
-}
-
 const LoginUser = ({navigation}: any) => {
   const [password, setPassword] = useState({value: '', error: ''});
   const [username, setUsername] = useState({value: '', error: ''});

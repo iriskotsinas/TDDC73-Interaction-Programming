@@ -4,7 +4,6 @@ import {StyleSheet, Text, View} from 'react-native';
 const UserReg = ({headerText}: any) => {
   return (
     <View style={styles.container}>
-      {/* <TouchableOpacity onPress={() => navigation.navigate('Home')} /> */}
       <View>
         <Text style={styles.caption}>{headerText}</Text>
       </View>

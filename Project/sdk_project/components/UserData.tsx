@@ -5,7 +5,6 @@ interface userInfo {
 
 export var userData = userDataExtraction();
 
-//Load the inital user database.
 function userDataExtraction() {
   const data = require('../data/users.json');
   var user = data.map(getSelectedUser);
@@ -22,8 +21,6 @@ function userDataExtraction() {
     currElement.index = index;
     return currElement;
   });
-
-  //Returns a map loaded with the userdata.
   return user;
 }
 

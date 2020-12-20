@@ -21,7 +21,6 @@ interface ElementProp {
 interface CarouselProps {
   items: Array<ElementProp>;
   itemsPerSlide: number;
-  onPress: any;
 }
 
 export const Carousel = (props: CarouselProps) => {
@@ -115,11 +114,9 @@ export const Carousel = (props: CarouselProps) => {
                   </Modal>
                 </View>
                 <TouchableOpacity
-                  // testID={`${index}`}
                   testID="totalFilm"
                   key={index}
                   style={styles.stat}
-                  // onPress={() => Alert.alert(`IMDB-rating: ${item.rating}`)}>
                   onPress={() => {
                     setModalVisible(true);
                   }}>
